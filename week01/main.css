@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@font-face {
+    font-family: 'Lora';
+    src: url('Lora-Regular.woff2') format('woff2'),
+        url('Lora-Regular.woff') format('woff'),
+        url('Lora-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* color and font */
+
+:root {
+    font-family: 'Lora', serif;
+    font-family: Arial, Helvetica, sans-serif;
+
+    --nav-link-color: #666;
+    --nav-link-hover: #00ddff;
+    --nav-link-active: #DEB887;
+    --primary-color: #333;
+    --border-lines: #d0d0d0;
+}
+
+* {
+    text-transform: uppercase;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* header and nav */
+
+header {
+    text-align: center;
+    padding: 10px;
+
+}
+
+h1 a {
+    font-family: 'Lora', serif;
+    font-size: 1.5em;
+    text-transform: none;
+}
+
+nav {
+    border-top: .5pt solid var(--border-lines);
+    border-bottom: .5pt solid var(--border-lines);
+
+}
+
+nav li {
+    padding: .5em;
+}
+
+nav li a {
+    color: var(--nav-link-color);
+}
+
+nav ul {
+    padding-inline-start: 0;
+}
+
+nav li a:hover {
+    color: var(--nav-link-hover);
+}
+
+nav li a.active {
+    color: var(--nav-link-active);
+}
+
+/* main */
+
+h2.post-date {
+    text-align: right;
+    border-bottom: .5pt solid var(--border-lines);
+    padding-bottom: 5pt;
+    font-weight: lighter;
+    font-size: 17pt;
+}
+
+h2 a {
+    font-family: 'Lora', serif;
+    color: var(--nav-link-color);
+    text-transform: none;
+    font-size: 17pt;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    margin: 0;
+    max-width: 300pt;
+}
+
+p {
+    text-transform: none;
+    font-size: 10pt;
+    padding-bottom: 1em;
+    border-bottom: .5pt solid var(--border-lines);
+
+}
+
+@media screen and (min-width: 748px) {
+   
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    h2.post-date {
+        border-right: .5px solid var(--border-lines);
+        border-bottom: none;
+        text-align: left;
+        flex-wrap: wrap;
+        padding: 0 5px 0 15px;
+    }
+
+}
+
