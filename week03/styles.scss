@@ -1,6 +1,6 @@
-// Variables
+/* Variables */
 
-//colors
+/*colors */
 $body-background-color: lightred;
 $form-background-color: white;
 $input-color: white;
@@ -32,5 +32,14 @@ body {
         margin-right: auto; 
         } 
     }
-} 
+}
 
+@mixin flex-container() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
